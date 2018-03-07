@@ -1,0 +1,1255 @@
+python ./absa.py -s '\t' -i ./dataout/train.txt -o ./dataout/train-parser.txt
+aspect len: 394
+python ./absa.py -s '\t' -i ./dataout/test.txt -o ./dataout/test-parser.txt
+aspect len: 394
+crfsuite learn -a l2sgd -p c2=2.0 -p feature.possible_transitions=1 -p feature.possible_states=1 -m model ./dataout/train-parser.txt
+CRFSuite 0.12  Copyright (c) 2007-2011 Naoaki Okazaki
+
+Start time of the training: 2018-03-07T14:01:29Z
+
+Reading the data set(s)
+[1] ./dataout/train-parser.txt
+0....1....2....3....4....5....6....7....8....9....10
+Number of instances: 1262
+Seconds required: 1.870
+
+Statistics the data set(s)
+Number of data sets (groups): 1
+Number of instances: 1261
+Number of items: 24419
+Number of attributes: 124520
+Number of labels: 3
+
+Feature generation
+type: CRF1d
+feature.minfreq: 0.000000
+feature.possible_states: 1
+feature.possible_transitions: 1
+0....1....2....3....4....5....6....7....8....9....10
+Number of features: 373569
+Seconds required: 2.190
+
+Stochastic Gradient Descent (SGD)
+c2: 2.000000
+max_iterations: 1000
+period: 10
+delta: 0.000001
+
+Calibrating the learning rate (eta)
+calibration.eta: 0.100000
+calibration.rate: 2.000000
+calibration.samples: 1000
+calibration.candidates: 10
+calibration.max_trials: 20
+Initial loss: 21362.515953
+Trial #1 (eta = 0.100000): 50316.901704 (worse)
+Trial #2 (eta = 0.050000): 27740.289839 (worse)
+Trial #3 (eta = 0.025000): 11218.112351
+Trial #4 (eta = 0.012500): 5754.041782
+Trial #5 (eta = 0.006250): 3834.193098
+Trial #6 (eta = 0.003125): 3731.921676
+Trial #7 (eta = 0.001563): 4072.499263
+Trial #8 (eta = 0.000781): 4523.401381
+Trial #9 (eta = 0.000391): 5000.638250
+Trial #10 (eta = 0.000195): 5466.940262
+Trial #11 (eta = 0.000098): 5901.253166
+Trial #12 (eta = 0.000049): 6327.079085
+Best learning rate (eta): 0.003125
+Seconds required: 1.530
+
+***** Epoch #1 *****
+Loss: 4602.961090
+Feature L2-norm: 2.989259
+Learning rate (eta): 0.003086
+Total number of feature updates: 1261
+Seconds required for this iteration: 0.160
+
+***** Epoch #2 *****
+Loss: 3207.146547
+Feature L2-norm: 4.068283
+Learning rate (eta): 0.003049
+Total number of feature updates: 2522
+Seconds required for this iteration: 0.150
+
+***** Epoch #3 *****
+Loss: 2808.719405
+Feature L2-norm: 4.884673
+Learning rate (eta): 0.003012
+Total number of feature updates: 3783
+Seconds required for this iteration: 0.150
+
+***** Epoch #4 *****
+Loss: 2516.582564
+Feature L2-norm: 5.535995
+Learning rate (eta): 0.002976
+Total number of feature updates: 5044
+Seconds required for this iteration: 0.150
+
+***** Epoch #5 *****
+Loss: 2334.710548
+Feature L2-norm: 6.083619
+Learning rate (eta): 0.002941
+Total number of feature updates: 6305
+Seconds required for this iteration: 0.150
+
+***** Epoch #6 *****
+Loss: 2163.785725
+Feature L2-norm: 6.589960
+Learning rate (eta): 0.002907
+Total number of feature updates: 7566
+Seconds required for this iteration: 0.150
+
+***** Epoch #7 *****
+Loss: 2047.635507
+Feature L2-norm: 7.034238
+Learning rate (eta): 0.002874
+Total number of feature updates: 8827
+Seconds required for this iteration: 0.150
+
+***** Epoch #8 *****
+Loss: 1955.491618
+Feature L2-norm: 7.438547
+Learning rate (eta): 0.002841
+Total number of feature updates: 10088
+Seconds required for this iteration: 0.160
+
+***** Epoch #9 *****
+Loss: 1868.083009
+Feature L2-norm: 7.810170
+Learning rate (eta): 0.002809
+Total number of feature updates: 11349
+Seconds required for this iteration: 0.150
+
+***** Epoch #10 *****
+Loss: 1797.050354
+Feature L2-norm: 8.149151
+Learning rate (eta): 0.002778
+Total number of feature updates: 12610
+Seconds required for this iteration: 0.150
+
+***** Epoch #11 *****
+Loss: 1740.610359
+Improvement ratio: 1.644452
+Feature L2-norm: 8.460770
+Learning rate (eta): 0.002747
+Total number of feature updates: 13871
+Seconds required for this iteration: 0.150
+
+***** Epoch #12 *****
+Loss: 1687.079937
+Improvement ratio: 0.901004
+Feature L2-norm: 8.752532
+Learning rate (eta): 0.002717
+Total number of feature updates: 15132
+Seconds required for this iteration: 0.160
+
+***** Epoch #13 *****
+Loss: 1631.048357
+Improvement ratio: 0.722033
+Feature L2-norm: 9.021383
+Learning rate (eta): 0.002688
+Total number of feature updates: 16393
+Seconds required for this iteration: 0.150
+
+***** Epoch #14 *****
+Loss: 1608.700453
+Improvement ratio: 0.564357
+Feature L2-norm: 9.276368
+Learning rate (eta): 0.002660
+Total number of feature updates: 17654
+Seconds required for this iteration: 0.150
+
+***** Epoch #15 *****
+Loss: 1565.984178
+Improvement ratio: 0.490890
+Feature L2-norm: 9.513351
+Learning rate (eta): 0.002632
+Total number of feature updates: 18915
+Seconds required for this iteration: 0.150
+
+***** Epoch #16 *****
+Loss: 1535.535662
+Improvement ratio: 0.409141
+Feature L2-norm: 9.736702
+Learning rate (eta): 0.002604
+Total number of feature updates: 20176
+Seconds required for this iteration: 0.150
+
+***** Epoch #17 *****
+Loss: 1506.446985
+Improvement ratio: 0.359248
+Feature L2-norm: 9.946734
+Learning rate (eta): 0.002577
+Total number of feature updates: 21437
+Seconds required for this iteration: 0.150
+
+***** Epoch #18 *****
+Loss: 1480.607438
+Improvement ratio: 0.320736
+Feature L2-norm: 10.144986
+Learning rate (eta): 0.002551
+Total number of feature updates: 22698
+Seconds required for this iteration: 0.150
+
+***** Epoch #19 *****
+Loss: 1452.774680
+Improvement ratio: 0.285872
+Feature L2-norm: 10.333418
+Learning rate (eta): 0.002525
+Total number of feature updates: 23959
+Seconds required for this iteration: 0.150
+
+***** Epoch #20 *****
+Loss: 1428.588031
+Improvement ratio: 0.257921
+Feature L2-norm: 10.510362
+Learning rate (eta): 0.002500
+Total number of feature updates: 25220
+Seconds required for this iteration: 0.160
+
+***** Epoch #21 *****
+Loss: 1417.514595
+Improvement ratio: 0.227931
+Feature L2-norm: 10.680354
+Learning rate (eta): 0.002475
+Total number of feature updates: 26481
+Seconds required for this iteration: 0.150
+
+***** Epoch #22 *****
+Loss: 1393.436399
+Improvement ratio: 0.210733
+Feature L2-norm: 10.839736
+Learning rate (eta): 0.002451
+Total number of feature updates: 27742
+Seconds required for this iteration: 0.150
+
+***** Epoch #23 *****
+Loss: 1373.681028
+Improvement ratio: 0.187356
+Feature L2-norm: 10.990482
+Learning rate (eta): 0.002427
+Total number of feature updates: 29003
+Seconds required for this iteration: 0.150
+
+***** Epoch #24 *****
+Loss: 1363.293552
+Improvement ratio: 0.180010
+Feature L2-norm: 11.135197
+Learning rate (eta): 0.002404
+Total number of feature updates: 30264
+Seconds required for this iteration: 0.150
+
+***** Epoch #25 *****
+Loss: 1350.766034
+Improvement ratio: 0.159330
+Feature L2-norm: 11.273847
+Learning rate (eta): 0.002381
+Total number of feature updates: 31525
+Seconds required for this iteration: 0.160
+
+***** Epoch #26 *****
+Loss: 1339.188727
+Improvement ratio: 0.146616
+Feature L2-norm: 11.405944
+Learning rate (eta): 0.002359
+Total number of feature updates: 32786
+Seconds required for this iteration: 0.140
+
+***** Epoch #27 *****
+Loss: 1319.940312
+Improvement ratio: 0.141299
+Feature L2-norm: 11.529801
+Learning rate (eta): 0.002336
+Total number of feature updates: 34047
+Seconds required for this iteration: 0.160
+
+***** Epoch #28 *****
+Loss: 1312.065891
+Improvement ratio: 0.128455
+Feature L2-norm: 11.650399
+Learning rate (eta): 0.002315
+Total number of feature updates: 35308
+Seconds required for this iteration: 0.150
+
+***** Epoch #29 *****
+Loss: 1297.389722
+Improvement ratio: 0.119767
+Feature L2-norm: 11.766203
+Learning rate (eta): 0.002294
+Total number of feature updates: 36569
+Seconds required for this iteration: 0.150
+
+***** Epoch #30 *****
+Loss: 1290.164937
+Improvement ratio: 0.107291
+Feature L2-norm: 11.877885
+Learning rate (eta): 0.002273
+Total number of feature updates: 37830
+Seconds required for this iteration: 0.150
+
+***** Epoch #31 *****
+Loss: 1282.169075
+Improvement ratio: 0.105560
+Feature L2-norm: 11.982947
+Learning rate (eta): 0.002252
+Total number of feature updates: 39091
+Seconds required for this iteration: 0.150
+
+***** Epoch #32 *****
+Loss: 1275.643072
+Improvement ratio: 0.092340
+Feature L2-norm: 12.085018
+Learning rate (eta): 0.002232
+Total number of feature updates: 40352
+Seconds required for this iteration: 0.160
+
+***** Epoch #33 *****
+Loss: 1267.927407
+Improvement ratio: 0.083407
+Feature L2-norm: 12.181233
+Learning rate (eta): 0.002212
+Total number of feature updates: 41613
+Seconds required for this iteration: 0.150
+
+***** Epoch #34 *****
+Loss: 1260.750707
+Improvement ratio: 0.081335
+Feature L2-norm: 12.276326
+Learning rate (eta): 0.002193
+Total number of feature updates: 42874
+Seconds required for this iteration: 0.150
+
+***** Epoch #35 *****
+Loss: 1253.398842
+Improvement ratio: 0.077683
+Feature L2-norm: 12.367314
+Learning rate (eta): 0.002174
+Total number of feature updates: 44135
+Seconds required for this iteration: 0.160
+
+***** Epoch #36 *****
+Loss: 1243.114586
+Improvement ratio: 0.077285
+Feature L2-norm: 12.453275
+Learning rate (eta): 0.002155
+Total number of feature updates: 45396
+Seconds required for this iteration: 0.150
+
+***** Epoch #37 *****
+Loss: 1239.174261
+Improvement ratio: 0.065177
+Feature L2-norm: 12.537491
+Learning rate (eta): 0.002137
+Total number of feature updates: 46657
+Seconds required for this iteration: 0.150
+
+***** Epoch #38 *****
+Loss: 1235.512418
+Improvement ratio: 0.061961
+Feature L2-norm: 12.617044
+Learning rate (eta): 0.002119
+Total number of feature updates: 47918
+Seconds required for this iteration: 0.150
+
+***** Epoch #39 *****
+Loss: 1228.355349
+Improvement ratio: 0.056201
+Feature L2-norm: 12.694751
+Learning rate (eta): 0.002101
+Total number of feature updates: 49179
+Seconds required for this iteration: 0.150
+
+***** Epoch #40 *****
+Loss: 1224.680809
+Improvement ratio: 0.053470
+Feature L2-norm: 12.770659
+Learning rate (eta): 0.002083
+Total number of feature updates: 50440
+Seconds required for this iteration: 0.160
+
+***** Epoch #41 *****
+Loss: 1219.186207
+Improvement ratio: 0.051660
+Feature L2-norm: 12.841504
+Learning rate (eta): 0.002066
+Total number of feature updates: 51701
+Seconds required for this iteration: 0.150
+
+***** Epoch #42 *****
+Loss: 1215.898409
+Improvement ratio: 0.049136
+Feature L2-norm: 12.912198
+Learning rate (eta): 0.002049
+Total number of feature updates: 52962
+Seconds required for this iteration: 0.150
+
+***** Epoch #43 *****
+Loss: 1211.125454
+Improvement ratio: 0.046900
+Feature L2-norm: 12.978727
+Learning rate (eta): 0.002033
+Total number of feature updates: 54223
+Seconds required for this iteration: 0.150
+
+***** Epoch #44 *****
+Loss: 1206.844391
+Improvement ratio: 0.044667
+Feature L2-norm: 13.044688
+Learning rate (eta): 0.002016
+Total number of feature updates: 55484
+Seconds required for this iteration: 0.150
+
+***** Epoch #45 *****
+Loss: 1203.404613
+Improvement ratio: 0.041544
+Feature L2-norm: 13.107326
+Learning rate (eta): 0.002000
+Total number of feature updates: 56745
+Seconds required for this iteration: 0.160
+
+***** Epoch #46 *****
+Loss: 1199.745692
+Improvement ratio: 0.036148
+Feature L2-norm: 13.167344
+Learning rate (eta): 0.001984
+Total number of feature updates: 58006
+Seconds required for this iteration: 0.140
+
+***** Epoch #47 *****
+Loss: 1196.420374
+Improvement ratio: 0.035735
+Feature L2-norm: 13.226347
+Learning rate (eta): 0.001969
+Total number of feature updates: 59267
+Seconds required for this iteration: 0.160
+
+***** Epoch #48 *****
+Loss: 1189.639419
+Improvement ratio: 0.038560
+Feature L2-norm: 13.283909
+Learning rate (eta): 0.001953
+Total number of feature updates: 60528
+Seconds required for this iteration: 0.140
+
+***** Epoch #49 *****
+Loss: 1189.977856
+Improvement ratio: 0.032251
+Feature L2-norm: 13.338863
+Learning rate (eta): 0.001938
+Total number of feature updates: 61789
+Seconds required for this iteration: 0.160
+
+***** Epoch #50 *****
+Loss: 1186.198589
+Improvement ratio: 0.032442
+Feature L2-norm: 13.392866
+Learning rate (eta): 0.001923
+Total number of feature updates: 63050
+Seconds required for this iteration: 0.150
+
+***** Epoch #51 *****
+Loss: 1181.453215
+Improvement ratio: 0.031938
+Feature L2-norm: 13.444110
+Learning rate (eta): 0.001908
+Total number of feature updates: 64311
+Seconds required for this iteration: 0.150
+
+***** Epoch #52 *****
+Loss: 1179.197129
+Improvement ratio: 0.031124
+Feature L2-norm: 13.494523
+Learning rate (eta): 0.001894
+Total number of feature updates: 65572
+Seconds required for this iteration: 0.150
+
+***** Epoch #53 *****
+Loss: 1182.108391
+Improvement ratio: 0.024547
+Feature L2-norm: 13.543817
+Learning rate (eta): 0.001880
+Total number of feature updates: 66833
+Seconds required for this iteration: 0.150
+
+***** Epoch #54 *****
+Loss: 1173.029219
+Improvement ratio: 0.028827
+Feature L2-norm: 13.591425
+Learning rate (eta): 0.001866
+Total number of feature updates: 68094
+Seconds required for this iteration: 0.160
+
+***** Epoch #55 *****
+Loss: 1176.011511
+Improvement ratio: 0.023293
+Feature L2-norm: 13.638337
+Learning rate (eta): 0.001852
+Total number of feature updates: 69355
+Seconds required for this iteration: 0.150
+
+***** Epoch #56 *****
+Loss: 1171.341292
+Improvement ratio: 0.024249
+Feature L2-norm: 13.682214
+Learning rate (eta): 0.001838
+Total number of feature updates: 70616
+Seconds required for this iteration: 0.150
+
+***** Epoch #57 *****
+Loss: 1171.002342
+Improvement ratio: 0.021706
+Feature L2-norm: 13.725279
+Learning rate (eta): 0.001825
+Total number of feature updates: 71877
+Seconds required for this iteration: 0.160
+
+***** Epoch #58 *****
+Loss: 1168.766901
+Improvement ratio: 0.017859
+Feature L2-norm: 13.767639
+Learning rate (eta): 0.001812
+Total number of feature updates: 73138
+Seconds required for this iteration: 0.140
+
+***** Epoch #59 *****
+Loss: 1164.424305
+Improvement ratio: 0.021945
+Feature L2-norm: 13.808207
+Learning rate (eta): 0.001799
+Total number of feature updates: 74399
+Seconds required for this iteration: 0.160
+
+***** Epoch #60 *****
+Loss: 1161.330020
+Improvement ratio: 0.021414
+Feature L2-norm: 13.847242
+Learning rate (eta): 0.001786
+Total number of feature updates: 75660
+Seconds required for this iteration: 0.150
+
+***** Epoch #61 *****
+Loss: 1162.872602
+Improvement ratio: 0.015978
+Feature L2-norm: 13.886086
+Learning rate (eta): 0.001773
+Total number of feature updates: 76921
+Seconds required for this iteration: 0.150
+
+***** Epoch #62 *****
+Loss: 1160.034377
+Improvement ratio: 0.016519
+Feature L2-norm: 13.924241
+Learning rate (eta): 0.001761
+Total number of feature updates: 78182
+Seconds required for this iteration: 0.140
+
+***** Epoch #63 *****
+Loss: 1159.669653
+Improvement ratio: 0.019349
+Feature L2-norm: 13.960589
+Learning rate (eta): 0.001748
+Total number of feature updates: 79443
+Seconds required for this iteration: 0.150
+
+***** Epoch #64 *****
+Loss: 1155.864573
+Improvement ratio: 0.014850
+Feature L2-norm: 13.996446
+Learning rate (eta): 0.001736
+Total number of feature updates: 80704
+Seconds required for this iteration: 0.150
+
+***** Epoch #65 *****
+Loss: 1155.100358
+Improvement ratio: 0.018103
+Feature L2-norm: 14.031073
+Learning rate (eta): 0.001724
+Total number of feature updates: 81965
+Seconds required for this iteration: 0.150
+
+***** Epoch #66 *****
+Loss: 1152.912453
+Improvement ratio: 0.015985
+Feature L2-norm: 14.064419
+Learning rate (eta): 0.001712
+Total number of feature updates: 83226
+Seconds required for this iteration: 0.150
+
+***** Epoch #67 *****
+Loss: 1153.402717
+Improvement ratio: 0.015259
+Feature L2-norm: 14.097843
+Learning rate (eta): 0.001701
+Total number of feature updates: 84487
+Seconds required for this iteration: 0.160
+
+***** Epoch #68 *****
+Loss: 1149.004597
+Improvement ratio: 0.017199
+Feature L2-norm: 14.130245
+Learning rate (eta): 0.001689
+Total number of feature updates: 85748
+Seconds required for this iteration: 0.160
+
+***** Epoch #69 *****
+Loss: 1149.048385
+Improvement ratio: 0.013381
+Feature L2-norm: 14.162030
+Learning rate (eta): 0.001678
+Total number of feature updates: 87009
+Seconds required for this iteration: 0.160
+
+***** Epoch #70 *****
+Loss: 1149.089334
+Improvement ratio: 0.010653
+Feature L2-norm: 14.191602
+Learning rate (eta): 0.001667
+Total number of feature updates: 88270
+Seconds required for this iteration: 0.150
+
+***** Epoch #71 *****
+Loss: 1146.408783
+Improvement ratio: 0.014361
+Feature L2-norm: 14.221634
+Learning rate (eta): 0.001656
+Total number of feature updates: 89531
+Seconds required for this iteration: 0.150
+
+***** Epoch #72 *****
+Loss: 1146.922446
+Improvement ratio: 0.011432
+Feature L2-norm: 14.250939
+Learning rate (eta): 0.001645
+Total number of feature updates: 90792
+Seconds required for this iteration: 0.160
+
+***** Epoch #73 *****
+Loss: 1147.080154
+Improvement ratio: 0.010975
+Feature L2-norm: 14.279291
+Learning rate (eta): 0.001634
+Total number of feature updates: 92053
+Seconds required for this iteration: 0.140
+
+***** Epoch #74 *****
+Loss: 1140.862615
+Improvement ratio: 0.013150
+Feature L2-norm: 14.307016
+Learning rate (eta): 0.001623
+Total number of feature updates: 93314
+Seconds required for this iteration: 0.160
+
+***** Epoch #75 *****
+Loss: 1142.725521
+Improvement ratio: 0.010829
+Feature L2-norm: 14.333796
+Learning rate (eta): 0.001613
+Total number of feature updates: 94575
+Seconds required for this iteration: 0.150
+
+***** Epoch #76 *****
+Loss: 1141.491854
+Improvement ratio: 0.010005
+Feature L2-norm: 14.360213
+Learning rate (eta): 0.001603
+Total number of feature updates: 95836
+Seconds required for this iteration: 0.150
+
+***** Epoch #77 *****
+Loss: 1138.661087
+Improvement ratio: 0.012946
+Feature L2-norm: 14.385743
+Learning rate (eta): 0.001592
+Total number of feature updates: 97097
+Seconds required for this iteration: 0.150
+
+***** Epoch #78 *****
+Loss: 1141.096457
+Improvement ratio: 0.006930
+Feature L2-norm: 14.410823
+Learning rate (eta): 0.001582
+Total number of feature updates: 98358
+Seconds required for this iteration: 0.150
+
+***** Epoch #79 *****
+Loss: 1137.240033
+Improvement ratio: 0.010383
+Feature L2-norm: 14.435043
+Learning rate (eta): 0.001572
+Total number of feature updates: 99619
+Seconds required for this iteration: 0.150
+
+***** Epoch #80 *****
+Loss: 1138.372671
+Improvement ratio: 0.009414
+Feature L2-norm: 14.458532
+Learning rate (eta): 0.001563
+Total number of feature updates: 100880
+Seconds required for this iteration: 0.160
+
+***** Epoch #81 *****
+Loss: 1137.496869
+Improvement ratio: 0.007835
+Feature L2-norm: 14.481817
+Learning rate (eta): 0.001553
+Total number of feature updates: 102141
+Seconds required for this iteration: 0.150
+
+***** Epoch #82 *****
+Loss: 1138.031241
+Improvement ratio: 0.007813
+Feature L2-norm: 14.504212
+Learning rate (eta): 0.001543
+Total number of feature updates: 103402
+Seconds required for this iteration: 0.150
+
+***** Epoch #83 *****
+Loss: 1134.750517
+Improvement ratio: 0.010866
+Feature L2-norm: 14.526308
+Learning rate (eta): 0.001534
+Total number of feature updates: 104663
+Seconds required for this iteration: 0.150
+
+***** Epoch #84 *****
+Loss: 1133.633692
+Improvement ratio: 0.006377
+Feature L2-norm: 14.547910
+Learning rate (eta): 0.001524
+Total number of feature updates: 105924
+Seconds required for this iteration: 0.160
+
+***** Epoch #85 *****
+Loss: 1133.683658
+Improvement ratio: 0.007976
+Feature L2-norm: 14.568760
+Learning rate (eta): 0.001515
+Total number of feature updates: 107185
+Seconds required for this iteration: 0.150
+
+***** Epoch #86 *****
+Loss: 1130.386719
+Improvement ratio: 0.009824
+Feature L2-norm: 14.589251
+Learning rate (eta): 0.001506
+Total number of feature updates: 108446
+Seconds required for this iteration: 0.160
+
+***** Epoch #87 *****
+Loss: 1131.810802
+Improvement ratio: 0.006052
+Feature L2-norm: 14.608954
+Learning rate (eta): 0.001497
+Total number of feature updates: 109707
+Seconds required for this iteration: 0.160
+
+***** Epoch #88 *****
+Loss: 1131.558609
+Improvement ratio: 0.008429
+Feature L2-norm: 14.628762
+Learning rate (eta): 0.001488
+Total number of feature updates: 110968
+Seconds required for this iteration: 0.160
+
+***** Epoch #89 *****
+Loss: 1131.372840
+Improvement ratio: 0.005186
+Feature L2-norm: 14.648570
+Learning rate (eta): 0.001479
+Total number of feature updates: 112229
+Seconds required for this iteration: 0.150
+
+***** Epoch #90 *****
+Loss: 1130.555866
+Improvement ratio: 0.006914
+Feature L2-norm: 14.667829
+Learning rate (eta): 0.001471
+Total number of feature updates: 113490
+Seconds required for this iteration: 0.150
+
+***** Epoch #91 *****
+Loss: 1128.692370
+Improvement ratio: 0.007801
+Feature L2-norm: 14.685970
+Learning rate (eta): 0.001462
+Total number of feature updates: 114751
+Seconds required for this iteration: 0.160
+
+***** Epoch #92 *****
+Loss: 1130.036359
+Improvement ratio: 0.007075
+Feature L2-norm: 14.703678
+Learning rate (eta): 0.001453
+Total number of feature updates: 116012
+Seconds required for this iteration: 0.150
+
+***** Epoch #93 *****
+Loss: 1127.222640
+Improvement ratio: 0.006678
+Feature L2-norm: 14.721543
+Learning rate (eta): 0.001445
+Total number of feature updates: 117273
+Seconds required for this iteration: 0.150
+
+***** Epoch #94 *****
+Loss: 1129.241510
+Improvement ratio: 0.003889
+Feature L2-norm: 14.738914
+Learning rate (eta): 0.001437
+Total number of feature updates: 118534
+Seconds required for this iteration: 0.150
+
+***** Epoch #95 *****
+Loss: 1127.963053
+Improvement ratio: 0.005072
+Feature L2-norm: 14.755920
+Learning rate (eta): 0.001429
+Total number of feature updates: 119795
+Seconds required for this iteration: 0.160
+
+***** Epoch #96 *****
+Loss: 1126.416486
+Improvement ratio: 0.003525
+Feature L2-norm: 14.772636
+Learning rate (eta): 0.001420
+Total number of feature updates: 121056
+Seconds required for this iteration: 0.170
+
+***** Epoch #97 *****
+Loss: 1124.995829
+Improvement ratio: 0.006058
+Feature L2-norm: 14.789042
+Learning rate (eta): 0.001412
+Total number of feature updates: 122317
+Seconds required for this iteration: 0.150
+
+***** Epoch #98 *****
+Loss: 1125.451955
+Improvement ratio: 0.005426
+Feature L2-norm: 14.805432
+Learning rate (eta): 0.001405
+Total number of feature updates: 123578
+Seconds required for this iteration: 0.150
+
+***** Epoch #99 *****
+Loss: 1124.097070
+Improvement ratio: 0.006473
+Feature L2-norm: 14.820649
+Learning rate (eta): 0.001397
+Total number of feature updates: 124839
+Seconds required for this iteration: 0.150
+
+***** Epoch #100 *****
+Loss: 1123.166110
+Improvement ratio: 0.006579
+Feature L2-norm: 14.836278
+Learning rate (eta): 0.001389
+Total number of feature updates: 126100
+Seconds required for this iteration: 0.150
+
+***** Epoch #101 *****
+Loss: 1122.921298
+Improvement ratio: 0.005139
+Feature L2-norm: 14.851020
+Learning rate (eta): 0.001381
+Total number of feature updates: 127361
+Seconds required for this iteration: 0.150
+
+***** Epoch #102 *****
+Loss: 1123.769566
+Improvement ratio: 0.005577
+Feature L2-norm: 14.865591
+Learning rate (eta): 0.001374
+Total number of feature updates: 128622
+Seconds required for this iteration: 0.160
+
+***** Epoch #103 *****
+Loss: 1123.354055
+Improvement ratio: 0.003444
+Feature L2-norm: 14.880019
+Learning rate (eta): 0.001366
+Total number of feature updates: 129883
+Seconds required for this iteration: 0.150
+
+***** Epoch #104 *****
+Loss: 1122.664026
+Improvement ratio: 0.005859
+Feature L2-norm: 14.894170
+Learning rate (eta): 0.001359
+Total number of feature updates: 131144
+Seconds required for this iteration: 0.150
+
+***** Epoch #105 *****
+Loss: 1120.875688
+Improvement ratio: 0.006323
+Feature L2-norm: 14.907797
+Learning rate (eta): 0.001351
+Total number of feature updates: 132405
+Seconds required for this iteration: 0.160
+
+***** Epoch #106 *****
+Loss: 1120.721850
+Improvement ratio: 0.005081
+Feature L2-norm: 14.921360
+Learning rate (eta): 0.001344
+Total number of feature updates: 133666
+Seconds required for this iteration: 0.150
+
+***** Epoch #107 *****
+Loss: 1122.290108
+Improvement ratio: 0.002411
+Feature L2-norm: 14.934631
+Learning rate (eta): 0.001337
+Total number of feature updates: 134927
+Seconds required for this iteration: 0.160
+
+***** Epoch #108 *****
+Loss: 1122.273676
+Improvement ratio: 0.002832
+Feature L2-norm: 14.948127
+Learning rate (eta): 0.001330
+Total number of feature updates: 136188
+Seconds required for this iteration: 0.150
+
+***** Epoch #109 *****
+Loss: 1121.838167
+Improvement ratio: 0.002014
+Feature L2-norm: 14.960847
+Learning rate (eta): 0.001323
+Total number of feature updates: 137449
+Seconds required for this iteration: 0.150
+
+***** Epoch #110 *****
+Loss: 1118.589108
+Improvement ratio: 0.004092
+Feature L2-norm: 14.973286
+Learning rate (eta): 0.001316
+Total number of feature updates: 138710
+Seconds required for this iteration: 0.150
+
+***** Epoch #111 *****
+Loss: 1120.932880
+Improvement ratio: 0.001774
+Feature L2-norm: 14.985532
+Learning rate (eta): 0.001309
+Total number of feature updates: 139971
+Seconds required for this iteration: 0.160
+
+***** Epoch #112 *****
+Loss: 1119.472751
+Improvement ratio: 0.003838
+Feature L2-norm: 14.997629
+Learning rate (eta): 0.001302
+Total number of feature updates: 141232
+Seconds required for this iteration: 0.150
+
+***** Epoch #113 *****
+Loss: 1119.565303
+Improvement ratio: 0.003384
+Feature L2-norm: 15.009458
+Learning rate (eta): 0.001295
+Total number of feature updates: 142493
+Seconds required for this iteration: 0.150
+
+***** Epoch #114 *****
+Loss: 1118.100067
+Improvement ratio: 0.004082
+Feature L2-norm: 15.020664
+Learning rate (eta): 0.001289
+Total number of feature updates: 143754
+Seconds required for this iteration: 0.160
+
+***** Epoch #115 *****
+Loss: 1118.840962
+Improvement ratio: 0.001819
+Feature L2-norm: 15.032039
+Learning rate (eta): 0.001282
+Total number of feature updates: 145015
+Seconds required for this iteration: 0.150
+
+***** Epoch #116 *****
+Loss: 1117.200255
+Improvement ratio: 0.003152
+Feature L2-norm: 15.043543
+Learning rate (eta): 0.001276
+Total number of feature updates: 146276
+Seconds required for this iteration: 0.150
+
+***** Epoch #117 *****
+Loss: 1118.507761
+Improvement ratio: 0.003382
+Feature L2-norm: 15.054354
+Learning rate (eta): 0.001269
+Total number of feature updates: 147537
+Seconds required for this iteration: 0.150
+
+***** Epoch #118 *****
+Loss: 1117.555638
+Improvement ratio: 0.004222
+Feature L2-norm: 15.065386
+Learning rate (eta): 0.001263
+Total number of feature updates: 148798
+Seconds required for this iteration: 0.150
+
+***** Epoch #119 *****
+Loss: 1117.551440
+Improvement ratio: 0.003836
+Feature L2-norm: 15.076148
+Learning rate (eta): 0.001256
+Total number of feature updates: 150059
+Seconds required for this iteration: 0.160
+
+***** Epoch #120 *****
+Loss: 1116.171434
+Improvement ratio: 0.002166
+Feature L2-norm: 15.086424
+Learning rate (eta): 0.001250
+Total number of feature updates: 151320
+Seconds required for this iteration: 0.140
+
+***** Epoch #121 *****
+Loss: 1116.161183
+Improvement ratio: 0.004275
+Feature L2-norm: 15.096572
+Learning rate (eta): 0.001244
+Total number of feature updates: 152581
+Seconds required for this iteration: 0.150
+
+***** Epoch #122 *****
+Loss: 1116.374990
+Improvement ratio: 0.002775
+Feature L2-norm: 15.106646
+Learning rate (eta): 0.001238
+Total number of feature updates: 153842
+Seconds required for this iteration: 0.150
+
+***** Epoch #123 *****
+Loss: 1115.336492
+Improvement ratio: 0.003792
+Feature L2-norm: 15.116547
+Learning rate (eta): 0.001232
+Total number of feature updates: 155103
+Seconds required for this iteration: 0.160
+
+***** Epoch #124 *****
+Loss: 1116.049879
+Improvement ratio: 0.001837
+Feature L2-norm: 15.126344
+Learning rate (eta): 0.001225
+Total number of feature updates: 156364
+Seconds required for this iteration: 0.160
+
+***** Epoch #125 *****
+Loss: 1115.727739
+Improvement ratio: 0.002790
+Feature L2-norm: 15.135916
+Learning rate (eta): 0.001220
+Total number of feature updates: 157625
+Seconds required for this iteration: 0.160
+
+***** Epoch #126 *****
+Loss: 1116.790313
+Improvement ratio: 0.000367
+Feature L2-norm: 15.145097
+Learning rate (eta): 0.001214
+Total number of feature updates: 158886
+Seconds required for this iteration: 0.150
+
+***** Epoch #127 *****
+Loss: 1115.939732
+Improvement ratio: 0.002301
+Feature L2-norm: 15.154360
+Learning rate (eta): 0.001208
+Total number of feature updates: 160147
+Seconds required for this iteration: 0.150
+
+***** Epoch #128 *****
+Loss: 1114.950556
+Improvement ratio: 0.002337
+Feature L2-norm: 15.163695
+Learning rate (eta): 0.001202
+Total number of feature updates: 161408
+Seconds required for this iteration: 0.150
+
+***** Epoch #129 *****
+Loss: 1114.478967
+Improvement ratio: 0.002757
+Feature L2-norm: 15.172740
+Learning rate (eta): 0.001196
+Total number of feature updates: 162669
+Seconds required for this iteration: 0.150
+
+***** Epoch #130 *****
+Loss: 1114.337810
+Improvement ratio: 0.001645
+Feature L2-norm: 15.181455
+Learning rate (eta): 0.001190
+Total number of feature updates: 163930
+Seconds required for this iteration: 0.160
+
+***** Epoch #131 *****
+Loss: 1114.748764
+Improvement ratio: 0.001267
+Feature L2-norm: 15.190142
+Learning rate (eta): 0.001185
+Total number of feature updates: 165191
+Seconds required for this iteration: 0.150
+
+***** Epoch #132 *****
+Loss: 1113.693674
+Improvement ratio: 0.002408
+Feature L2-norm: 15.198639
+Learning rate (eta): 0.001179
+Total number of feature updates: 166452
+Seconds required for this iteration: 0.150
+
+***** Epoch #133 *****
+Loss: 1114.140921
+Improvement ratio: 0.001073
+Feature L2-norm: 15.207008
+Learning rate (eta): 0.001174
+Total number of feature updates: 167713
+Seconds required for this iteration: 0.150
+
+***** Epoch #134 *****
+Loss: 1114.762795
+Improvement ratio: 0.001155
+Feature L2-norm: 15.214931
+Learning rate (eta): 0.001168
+Total number of feature updates: 168974
+Seconds required for this iteration: 0.140
+
+***** Epoch #135 *****
+Loss: 1111.697271
+Improvement ratio: 0.003626
+Feature L2-norm: 15.223198
+Learning rate (eta): 0.001163
+Total number of feature updates: 170235
+Seconds required for this iteration: 0.150
+
+***** Epoch #136 *****
+Loss: 1112.282598
+Improvement ratio: 0.004053
+Feature L2-norm: 15.231091
+Learning rate (eta): 0.001157
+Total number of feature updates: 171496
+Seconds required for this iteration: 0.150
+
+***** Epoch #137 *****
+Loss: 1112.604469
+Improvement ratio: 0.002998
+Feature L2-norm: 15.238900
+Learning rate (eta): 0.001152
+Total number of feature updates: 172757
+Seconds required for this iteration: 0.160
+
+***** Epoch #138 *****
+Loss: 1110.817371
+Improvement ratio: 0.003721
+Feature L2-norm: 15.246741
+Learning rate (eta): 0.001147
+Total number of feature updates: 174018
+Seconds required for this iteration: 0.150
+
+***** Epoch #139 *****
+Loss: 1111.448215
+Improvement ratio: 0.002727
+Feature L2-norm: 15.254603
+Learning rate (eta): 0.001142
+Total number of feature updates: 175279
+Seconds required for this iteration: 0.160
+
+***** Epoch #140 *****
+Loss: 1113.988146
+Improvement ratio: 0.000314
+Feature L2-norm: 15.261886
+Learning rate (eta): 0.001136
+Total number of feature updates: 176540
+Seconds required for this iteration: 0.140
+
+***** Epoch #141 *****
+Loss: 1111.131330
+Improvement ratio: 0.003256
+Feature L2-norm: 15.268955
+Learning rate (eta): 0.001131
+Total number of feature updates: 177801
+Seconds required for this iteration: 0.150
+
+***** Epoch #142 *****
+Loss: 1111.102765
+Improvement ratio: 0.002332
+Feature L2-norm: 15.275884
+Learning rate (eta): 0.001126
+Total number of feature updates: 179062
+Seconds required for this iteration: 0.150
+
+***** Epoch #143 *****
+Loss: 1111.938567
+Improvement ratio: 0.001981
+Feature L2-norm: 15.283112
+Learning rate (eta): 0.001121
+Total number of feature updates: 180323
+Seconds required for this iteration: 0.150
+
+***** Epoch #144 *****
+Loss: 1111.110834
+Improvement ratio: 0.003287
+Feature L2-norm: 15.290158
+Learning rate (eta): 0.001116
+Total number of feature updates: 181584
+Seconds required for this iteration: 0.150
+
+***** Epoch #145 *****
+Loss: 1111.076270
+Improvement ratio: 0.000559
+Feature L2-norm: 15.296747
+Learning rate (eta): 0.001111
+Total number of feature updates: 182845
+Seconds required for this iteration: 0.150
+
+***** Epoch #146 *****
+Loss: 1110.756560
+Improvement ratio: 0.001374
+Feature L2-norm: 15.303436
+Learning rate (eta): 0.001106
+Total number of feature updates: 184106
+Seconds required for this iteration: 0.150
+
+***** Epoch #147 *****
+Loss: 1111.581729
+Improvement ratio: 0.000920
+Feature L2-norm: 15.310097
+Learning rate (eta): 0.001101
+Total number of feature updates: 185367
+Seconds required for this iteration: 0.140
+
+***** Epoch #148 *****
+Loss: 1111.500665
+Improvement ratio: -0.000615
+Feature L2-norm: 15.316692
+Learning rate (eta): 0.001096
+Total number of feature updates: 186628
+Seconds required for this iteration: 0.150
+
+SGD terminated with the stopping criteria
+Loss: 1110.756560
+Total seconds required for training: 24.040
+
+Storing the model
+Number of active features: 373569 (373569)
+Number of active attributes: 124520 (124520)
+Number of active labels: 3 (3)
+Writing labels
+Writing attributes
+Writing feature references for transitions
+Writing feature references for attributes
+Seconds required: 0.300
+
+End time of the training: 2018-03-07T14:01:58Z
+
+crfsuite tag -r -m model ./dataout/test-parser.txt > ./dataout/tagresult.txt
+paste ./dataout/testthree.txt ./dataout/tagresult.txt >./dataout/combine.txt
+cat ./dataout/combine.txt | cut -f1,2,4,5 | perl eval.pl -d "\t"
+processed 2768 tokens with 176 phrases; found: 158 phrases; correct: 104.
+accuracy:  94.94%; precision:  65.82%; recall:  59.09%; FB1:  62.28
+             TERM: precision:  65.82%; recall:  59.09%; FB1:  62.28  158
